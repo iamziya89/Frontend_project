@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label::before{content: "\2606";
+        padding-bottom: 8px;
+        display: inline-block;
+        transition: 0.2s;
+    }
+    span{
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        height: 20px;
+        font-size: 1rem;
+        white-space: nowrap;
+        transition: 0.15s ease-out;
+        pointer-events: none;
+        letter-spacing: -2px;
+        transform: translateY(-50%);
+    }
+    label:hover span{
+        opacity: 1;
+        transform: none;
+        letter-spacing: 0;
+    }
+    input:checked ~ label:before{
+        content: '\2605';
+        color: #2962ff;
+        filter: drop-shadow(0 0 4px);
+        transform: rotate(0.2turn);
+        transition: calc(0.1*attr(data-idx integer));
+    }
+    </style>
+</head>
+<body style="background-color: #e2e1d9;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;">
+    <div style="display: inline-block;
+    font-size: 0;
+    position: relative;
+    padding: 0 50px 8%;
+    color: grey;">
+        <input type="radio" name="rate" id="rating-opt5" data-idx="0" hidden>
+        <label for="rating-opt5" style="float: right;
+        padding: 0;
+        font-size: 50px;
+        cursor: pointer;"><span>Excellent</span></label>
+
+        <input type="radio" name="rate" id="rating-opt4" data-idx="1" hidden>
+        <label for="rating-opt4" style="float: right;
+        padding: 0;
+        font-size: 50px;
+        cursor: pointer;"><span>Very Good</span></label>
+
+        <input type="radio" name="rate" id="rating-opt3" data-idx="2" hidden>
+        <label for="rating-opt3" style="float: right;
+        padding: 0;
+        font-size: 50px;
+        cursor: pointer;"><span>Good</span></label>
+
+        <input type="radio" name="rate" id="rating-opt2" data-idx="3" hidden>
+        <label for="rating-opt2" style="float: right;
+        padding: 0;
+        font-size: 50px;
+        cursor: pointer;"><span>Bad</span></label>
+
+        <input type="radio" name="rate" id="rating-opt1" data-idx="4" hidden>
+        <label for="rating-opt1" style="float: right;
+        padding: 0;
+        font-size: 50px;
+        cursor: pointer;"><span>Not Satisfied</span></label>
+    </div>
+</body>
+</html>
