@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-Box</title>
+    <style>
+        .flex-container{
+            background-color: indianred;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            height: 400px;
+            align-items: stretch;
+            flex-wrap: wrap;
+            align-content: center;
+            
+        }
+        .flex-child{
+            background-color: wheat;
+            margin: 20px;
+            padding: 20px;
+            width: 100px;
+            text-align: center;
+            
+            /* display: inline-block; */  
+        }
+        #one{
+            order: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-child" id="one">One</div>
+         <div class="flex-child" id="Two">Two</div>
+        <div class="flex-child" id="three">Three</div>
+        <!-- <div class="flex-child">Four</div>
+        <div class="flex-child">Five</div>
+        <div class="flex-child">Six</div>
+        <div class="flex-child">Seven</div>
+        <div class="flex-child">Eight</div>  -->
+    </div>
+    <script>
+        console.log("Mohd Ziya");
+    </script>
+</body>
+</html>
