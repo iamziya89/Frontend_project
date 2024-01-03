@@ -46,4 +46,28 @@
         <div class="grid-item" id="nine">9</div>
     </div>
 </body>
+<script>
+    // var num=prompt("Please Enter the number")
+    // function sumofDigit(){
+    //     let sum=0;
+    //     while(num>0){
+    //         sum+=num%10;
+    //         num=Math.floor(num/10);
+    //     }
+    //     return `The sum of the digit of the given number will be ${sum}`;
+    // }
+    // console.log(sumofDigit())
+    
+    var num=Math.abs(prompt("Please Enter the number that you want to count the number of digit"))
+    // console.log(num);
+    function countDigit(){
+        let count=0;
+        do{
+            count++;
+            num=Math.floor(num/10)
+        }while(num>0)
+        return `The number of digit in the number will be ${count}`
+    }
+console.log(countDigit());
+</script>
 </html>

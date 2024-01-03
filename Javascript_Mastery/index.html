@@ -3,17 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Number Input</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <h3 style="text-align: center;">Javascript Mastery</h3>
-    <h1 class="head1">Hello World</h1>
-    <h1 class="head2">Hello World</h1>
-    <h1 class="head2">Hello World</h1>
-    <h1 class="head4">Hello World</h1>
-    <h1 class="head5">Hello World</h1>
-    <h1 class="head6">Hello World</h1>
-    <h1 class="head7">Hello World</h1>
-    <script src="/Javascript_Mastery/index.js"></script>
+    <input type="text" id="number-input" placeholder="Type numbers only...">
+
+    <script>
+        var contextMenuEnabled = true;
+
+$(document).ready(function() {
+    toggleContextMenu();
+
+    $(document).on("click", function() {
+        // Toggle the right-click context menu state when the page is clicked
+        contextMenuEnabled = !contextMenuEnabled;
+        toggleContextMenu();
+    });
+});
+
+function toggleContextMenu() {
+    if (contextMenuEnabled) {
+        $(document).off("contextmenu");
+    } else {
+        $(document).on("contextmenu", function(e) {
+            e.preventDefault();
+        });
+    }
+}
+
+    </script>
 </body>
 </html>

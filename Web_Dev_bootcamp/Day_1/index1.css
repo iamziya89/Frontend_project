@@ -1,0 +1,38 @@
+*{
+    /* margin: 0; */
+    /* padding: 0; */
+    box-sizing: border-box;
+}
+.header{
+    height: 4rem;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 6.5rem;
+}
+.header .left a{
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+}
+.header .right .navbar ul{
+    display: flex;
+}
+.header .right .navbar ul li a{
+    text-decoration: none;
+    padding: 0.4rem;
+}
+.header .right .navbar ul li{
+    list-style-type: none;
+    font-weight: 800;
+    font-size: 1.4rem;
+}
+.header .right .navbar ul li a.active{
+    color: greenyellow;
+}
+.header .right .navbar ul li a:hover{
+    color: white;
+    padding: 1.5rem;
+    border-bottom: 2px dotted white;
+}

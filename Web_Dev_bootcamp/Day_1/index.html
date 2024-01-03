@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <script src="https://kit.fontawesome.com/97079daadd.js" crossorigin="anonymous"></script>
+    <style>
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 5rem;
+            background-color: #99ccff;
+            padding: 2rem 10%;
+        }
+        header .list{
+            font-size: 2.2rem;
+            font-weight: bolder;
+            text-decoration: none;
+            color: black;
+        }
+        header .logo i{
+            font-size: 2.2rem;
+        }
+        header .logo{
+            text-decoration: none;
+        }
+        header .navbar ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        header .navbar li{
+            margin-left: 2.5rem;
+            text-decoration: none;
+        }
+        header .navbar li a{
+            font-size: 1.5rem;
+            color: black;
+            font-weight: 800;
+            text-decoration: none;
+            letter-spacing: 0.05rem;
+        }
+        header .navbar li a.active{
+            color: white;
+            
+        }
+        header .navbar li a:hover{
+            color: green;
+            border-bottom:0.2rem dotted blue;
+            padding: 0.5rem;
+        }
+        .home{
+            background-color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <a href="/" class="logo"><i class="fa-brands fa-html5"></i> <span>Ziya</span></a>
+
+        <div id="list" class="list">
+            <nav class="navbar">
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Sign In</a></li>
+                    </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="home" id="home">
+        
+    </section>
+</body>
+</html>
